@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Avantis team demo" parallel="tests" thread-count="1">
+
+	<test name="Application using chrome" parallel="methods" thread-count="3">
+		<parameter name="browser" value="chrome" />
+		<packages>
+			<package name="tests" />
+		</packages>
+	</test>
+
+	<test name="Application using firefox" parallel="methods" thread-count="3">
+		<parameter name="browser" value="firefox" />
+		<packages>
+			<package name="tests" />
+		</packages>
+	</test>
+
+	<test name="Application using ie" parallel="methods" thread-count="3">
+		<parameter name="browser" value="ie" />
+		<packages>
+			<package name="tests" />
+		</packages>
+	</test>
+</suite>
